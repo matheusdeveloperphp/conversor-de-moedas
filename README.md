@@ -6,7 +6,7 @@ Bem-vindo ao **Conversor R$ ➔ US$**, uma aplicação web simples e moderna que
 
 ## 🔥 Tecnologias utilizadas
 
-- **Java 21** + **Spring Boot 3.4.5** — Back-end da aplicação
+- **Java 17** + **Spring Boot 3.4.5** — Back-end da aplicação
 - **HTML5**, **CSS3** e **JavaScript** — Front-end
 - **AwesomeAPI** — API pública para cotações em tempo real
 
