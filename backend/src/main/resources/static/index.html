@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Real para Dólar</title>
+    <link rel="stylesheet" href="style.css"> <!-- Aqui importa o CSS externo -->
+</head>
+<body>
+<div class="container">
+    <h2>Conversor R$ ➔ US$</h2>
+
+    <input id="valorReal" type="number" placeholder="Digite o valor em reais">
+    <button onclick="converter()">Converter</button>
+
+    <p id="resultado"></p>
+</div>
+
+<script>
+    function converter() {
+        const valorReal = document.getElementById('valorReal').value;
+        fetch(`/api/converter?valorReal=${valorReal}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro na requisição');
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('resultado').innerText = `Valor em dólar: $${data.toFixed(2)}`;
+            })
+            .catch(error => {
+                document.getElementById('resultado').innerText = 'Erro na conversão.';
+                console.error(error);
+            });
+    }
+</script>
+</body>
+</html>
