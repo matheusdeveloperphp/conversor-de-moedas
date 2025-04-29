@@ -17,11 +17,19 @@ Bem-vindo ao **Conversor R$ ➔ US$**, uma aplicação web simples e moderna que
 ```
 /
 ├── backend/       # Projeto Spring Boot
-│   └── (todos os arquivos Java e configurações)
+│   └── src
+│     └── java
+│        └── main
+│          └── ConversorApplication.java
 │
 ├── frontend/      # Aplicação Front-End
-│   ├── index.html
-│   └── style.css
+│   └── src
+│    └── java
+│     └── main
+│       └── resources
+│          └── static
+│            └── index.html
+│              └── style.css
 │
 ├── README.md      # Este arquivo
 └── (outros arquivos se houver)
